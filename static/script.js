@@ -9,7 +9,7 @@ const fileInput = document.getElementById("fileInput");
 const previewImg = document.getElementById("preview");
 const selectBtn = document.getElementById("selectImage");
 const processBtn = document.getElementById("processImage");
-const PREDICT_URL = "https://c258fab8c66b.ngrok-free.app/predict";
+const PREDICT_URL = process.env.PREDICT_URL;
 
 let selectedFile = null;
 let realtimeInterval;
