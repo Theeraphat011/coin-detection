@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Coin Detector 🪙</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+  <div class="header-box">
+    <h1>
+      Coin Detector
+    </h1>
+    <img src="/static/assets/coin.png" width="40px" height="40px" alt="header icon">
+  </div>
+
+  <select id="mode">
+    <option value="single">
+      Single Capture
+    </option>
+    <option value="realtime">
+      Realtime Background
+    </option>
+  </select>
+
+  <div>
+    <button id="start">เลือกโหมด</button>
+    <button id="stop">ยกเลิกโหมด</button>
+  </div>
+
+  <div style="display:flex;justify-content:center;align-items:center;width:100%;margin-top:12px">
+    <video id="video" autoplay playsinline style="display:none"></video>
+    <img id="preview" alt="Preview"
+      style="display:none; max-width:100%; max-height:60vh; object-fit:contain; border-radius:8px;" />
+  </div>
+
+  <div>
+    <button id="selectImage" class="secondary" style="display:none">เลือกภาพ</button>
+    <button id="processImage" style="display:none">ประมวลผล</button>
+  </div>
+
+  <div id="coinName">ยังไม่ได้ตรวจจับ</div>
+  <div id="summary" style="margin:0 8px;color:#333;font-size:17px;"></div>
+
+
+
+  <canvas id="canvas" style="display:none"></canvas>
+  <input type="file" id="fileInput" accept="image/*" capture="environment" style="display:none">
+
+  <script defer src="/static/script.js"></script>
+</body>
+
+</html>
